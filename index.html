@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    #container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>ASCII Character Mapper</h1>
+    <input type="text" id="inputText" placeholder="Enter a string">
+    <button id="submitBtn">Submit</button>
+    <p id="asciiResult"></p>
+  </div>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function () {
+      const inputText = document.getElementById('inputText').value;
+      const asciiArray = inputText.split('').map(char => char.charCodeAt(0));
+      const asciiString = asciiArray.join(', ');
+      document.getElementById('asciiResult').textContent = 'ASCII Characters: ' + asciiString;
+    });
+  </script>
+</body>
+</html>
+
+  
