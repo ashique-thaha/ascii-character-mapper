@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 17px;
+    text-align:center;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #container {
+    max-width: 400px ;
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+    padding: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="text"] {
+    font-family: cursive;
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* button {
+    font-size: 20px;
+    font-family: fantasy;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1864ac;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   */
+   
+   
+   button {
+     --b: 3px;   
+     --s: .45em; 
+     --color: #eaedf1;
+     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+     color: var(--color);
+     --_p: var(--s);
+     background:
+       conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+       var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+     transition: .3s linear, color 0s, background-color 0s;
+     outline: var(--b) solid #0000;
+     outline-offset: .6em;
+     font-size: 16px;
+   
+     border: 0;
+   
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+   }
+   
+   button:hover,
+   button:focus-visible{
+     --_p: 0px;
+     outline-color: var(--color);
+     outline-offset: .05em;
+   }
+   
+   button:active {
+     background: var(--color);
+     color: #fff;
+   }
+
+
+
+  #asciiResult {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
