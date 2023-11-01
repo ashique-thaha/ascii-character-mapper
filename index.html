@@ -1,68 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    body {
-      font-family:fantasy;
-      text-align: center;
-      background-color: #878080;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    #container {
-     
-      max-width: 400px;
-      background-color: #0d3955;
-      padding: 200px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(238, 234, 234, 0.2);
-    }
-    input[type="text"] {
-      font-family: fantasy;
-      font-size: 15px;
-      width: 100%;
-      padding: 15px ;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-    button {
-      font-size: 20px;
-      font-family: fantasy;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #0b112d;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    #asciiResult {
-      color: #ffffff;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div id="container">
-    <h1 style="color: #fff; font-size: 24px;">ASCII Character Mapper</h1>
+    <h1 class="header">ASCII Character Mapper</h1>
     <input type="text" id="inputText" placeholder="Enter a string">
     <button id="submitBtn">Submit</button>
     <p id="asciiResult"></p>
   </div>
-
-  <script>
-    document.getElementById('submitBtn').addEventListener('click', function () {
-      const inputText = document.getElementById('inputText').value;
-      const asciiArray = inputText.split('').map(char => char.charCodeAt(0));
-      const asciiString = asciiArray.join(', ');
-      document.getElementById('asciiResult').textContent = 'ASCII Characters: ' + asciiString;
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
